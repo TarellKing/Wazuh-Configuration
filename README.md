@@ -8,7 +8,7 @@
 ---
 
 ## Introduction
-Welcome to our Wazuh deployment guide! This document outlines our journey and methods in implementing **Wazuh**, an open-source security monitoring solution, within an Ubuntu-based network infrastructure. 
+Welcome to my Wazuh deployment guide! This document outlines my journey and methods in implementing **Wazuh**, an open-source security monitoring solution, within an Ubuntu-based network infrastructure. 
 
 🔍 **Why Wazuh?**
 Wazuh helps organizations:
@@ -34,7 +34,7 @@ Wazuh helps organizations:
 [^4]: Provides a user interface to visualize alerts and logs.
 [^5]: Azure virtual machines simulate potential target systems for intrusion detection testing.
 
-💡 **Pro Tip**: For detailed installation steps, visit the [Wazuh Installation Page](https://documentation.wazuh.com/current/installation-guide/wazuh-dashboard/index.html).
+💡 **Tip**: For detailed installation steps, visit the [Wazuh Installation Page](https://documentation.wazuh.com/current/installation-guide/wazuh-dashboard/index.html).
 
 ---
 
