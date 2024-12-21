@@ -5,7 +5,6 @@
 2. [Prerequisites and Setup](#prerequisites-and-setup)
 3. [Troubleshooting / Common Issues](#troubleshooting--common-issues)
 
-
 ---
 
 ## Introduction
@@ -39,29 +38,29 @@ Wazuh helps organizations:
 
 ---
 
-## Troubleshooting / Common Issues ❓
+## Troubleshooting / Common Issues
 
-### SSL Certificate Issue with Loopback IP Address
-Hosting services on the loopback IP (`127.0.0.1`) caused issues with the SSL certificate.  
-**Solution:** Use a non-loopback IP (e.g., your VM’s private IP) to avoid SSL validation errors. Update the service configuration to reflect this.
+### SSL Certificate Issues with Loopback IP Address
+If you try hosting services on the loopback IP (`127.0.0.1`), you may encounter SSL certificate issues.  
+**Solution**: Use a non-loopback IP (e.g., your VM’s private IP). Update your service configuration accordingly to avoid validation errors.
 
 ---
 
 ### Port Forwarding for Locally Hosted Virtual Machines
-Without port forwarding, exposing your virtual machine to the internet is challenging. The Wazuh server listens for log forwarders on **port 1514**, which needs to be externally accessible.  
-**Solution:**
-1. Set up port forwarding on your router for **port 1514** (TCP).
-2. Ensure your VM is assigned a **static IP** within your network.
-3. Test connectivity using `nc` or `telnet`.
+When setting up Wazuh on a locally hosted virtual machine (not in a cloud environment), ensure you have port forwarding configured. The Wazuh server listens for log forwarders on **port 1514**, and this port must be externally accessible.  
+**Solution**:
+1. Configure your router to forward **port 1514 (TCP)** to your VM’s private IP.
+2. Assign a **static IP** to your VM to prevent connectivity issues after reboots.
+3. Test the port using tools like `nc` or `telnet` from an external device.
 
 ---
 
-### Wazuh Indexer Timeout Issue
-The Wazuh Indexer occasionally times out during startup.  
-**Solution:** Use this bash script to increase the timeout and ensure all services start correctly:
+### Wazuh Indexer Timeout
+The Wazuh Indexer might time out during startup due to insufficient timeout settings.  
+**Solution**: Use this bash script to increase the timeout and ensure all Wazuh services start automatically:
 
 ```bash
-# Create the directory for the Wazuh Indexer service configuration (if it doesn't exist)
+# Create the directory for the Wazuh Indexer configuration (if it doesn't exist)
 if [ ! -d /etc/systemd/system/wazuh-indexer.service.d ]; then
     sudo mkdir /etc/systemd/system/wazuh-indexer.service.d
 fi
@@ -69,7 +68,7 @@ fi
 # Add the timeout configuration
 echo -e "[Service]\nTimeoutStartSec=180" | sudo tee /etc/systemd/system/wazuh-indexer.service.d/override.conf
 
-# Reload systemd to apply changes
+# Reload systemd to apply the changes
 sudo systemctl daemon-reload
 
 # Enable and start Wazuh services
