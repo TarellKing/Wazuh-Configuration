@@ -16,10 +16,12 @@ Welcome to our Wazuh deployment guide. This document outlines our journey and me
 - **Ubuntu Server**: The chosen operating system for hosting the Wazuh Manager.
 - **Windows Server ISO**: For creating a controlled client environment to monitor.
 
-### Installation Steps
-1. **Virtual Machine Setup**: Begin by setting up an Ubuntu Server on VirtualBox. Allocate at least 2 CPU cores and 4GB RAM for optimal performance.
-2. **Wazuh Manager Installation**: Install the Wazuh Manager on your Ubuntu Server. This component will collect and analyze data from deployed agents.
-3. **Agent Deployment**: Install Wazuh Agents on any client machines you wish to monitor. In our setup, we also use a Windows Server as part of our testing environment.
+|                | **Ubuntu Virtual Machine** |                |
+|----------------|----------------------------|----------------|
+| **Wazuh Indexer** | **Wazuh Server**          | **Wazuh Dashboard** |
+| Honeypot Machine 1 | Honeypot Machine 2       | Honeypot Machine 3 |
+
+
 
 ## Custom Configuration Challenges
 During the deployment of Wazuh in our environment, we faced several configuration challenges, particularly in terms of network settings and integrating with existing systems.
