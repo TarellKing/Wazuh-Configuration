@@ -34,6 +34,9 @@ Wazuh helps organizations:
 [^4]: Provides a user interface to visualize alerts and logs.
 [^5]: Azure virtual machines simulate potential target systems for intrusion detection testing.
 
+![image](https://github.com/user-attachments/assets/9bd3d602-4ca2-470f-a0a9-fa8a92b1db7f)
+
+
 💡 **Tip**: For detailed installation steps, visit the [Wazuh Installation Page](https://documentation.wazuh.com/current/installation-guide/wazuh-dashboard/index.html).
 
 ---
@@ -58,6 +61,7 @@ When setting up Wazuh on a locally hosted virtual machine (not in a cloud enviro
 ### Wazuh Indexer Timeout
 The Wazuh Indexer might time out during startup due to insufficient timeout settings.  
 **Solution**: Use this bash script to increase the timeout and ensure all Wazuh services start automatically:
+![image](https://github.com/user-attachments/assets/c8caafda-90d5-4366-803e-b5454113e3a5)
 
 ```bash
 # Create the directory for the Wazuh Indexer configuration (if it doesn't exist)
