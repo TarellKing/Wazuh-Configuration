@@ -23,7 +23,6 @@ Wazuh helps organizations:
 **Tools Used**: VirtualBox 🖥️, Ubuntu Server 🐧, Wazuh Manager, Wazuh Agent
 
 
-![Wazuh project drawio (1)](https://github.com/user-attachments/assets/1302acc8-24d3-4d21-959c-ce12569f8a55)
 
 
 |                | **Ubuntu Virtual Machine**[^1] |                |
@@ -37,10 +36,14 @@ Wazuh helps organizations:
 [^4]: Provides a user interface to visualize alerts and logs.
 [^5]: Azure virtual machines simulate potential target systems for intrusion detection testing.
 
-![image](https://github.com/user-attachments/assets/9bd3d602-4ca2-470f-a0a9-fa8a92b1db7f)
+![image](https://github.com/user-attachments/assets/8428b59c-83ea-470b-947e-d776718c1df4)
+
 
 
 💡 **Tip**: For detailed installation steps, visit the [Wazuh Installation Page](https://documentation.wazuh.com/current/installation-guide/wazuh-dashboard/index.html).
+
+
+![Wazuh project drawio (1)](https://github.com/user-attachments/assets/1302acc8-24d3-4d21-959c-ce12569f8a55)
 
 ---
 
