@@ -22,7 +22,10 @@ Wazuh helps organizations:
 ## Prerequisites and Setup
 **Tools Used**: VirtualBox 🖥️, Ubuntu Server 🐧, Wazuh Manager, Wazuh Agent
 
-### Required Hardware and Software
+
+![Wazuh project drawio (1)](https://github.com/user-attachments/assets/1302acc8-24d3-4d21-959c-ce12569f8a55)
+
+
 |                | **Ubuntu Virtual Machine**[^1] |                |
 |----------------|----------------------------|----------------|
 | **Wazuh Indexer**[^2] | **Wazuh Server**[^3]    | **Wazuh Dashboard**[^4] |
